@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 
+import Header from '../components/Header.astro';
+
 const pageTitle = "About Me";
 
 const identity = {
@@ -19,6 +21,8 @@ const goal = 3;
 const skillColor = 'navy';
 const fontWeight = 'bold';
 const textCase = 'uppercase';
+
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
@@ -41,10 +45,8 @@ const textCase = 'uppercase';
         </style>
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>
 		<h1>About</h1>
+        <Header />
         <h2>... and my new Astro site!</h2>
         <p>Just an astro site being completed via astro tutorial</p>
         <p>Here are a few facts about me:</p>
@@ -64,5 +66,9 @@ const textCase = 'uppercase';
         {finished && <p>I finished this tutorial!</p>}
 
         {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+        <Footer />
+        <script>
+            import "../scripts/menu";
+        </script>
 	</body>
 </html>
